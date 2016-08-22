@@ -1,0 +1,24 @@
+###
+# us.gov.census.csv.parser
+###
+
+###
+# Load dependencies
+###
+dependencies:
+    'parsekit_tools.emit': 'emit'
+
+###
+# Parse
+###
+extract:
+  - step: Emit Stock Tickers
+    action: emit.EmitPaths
+    paths:
+      - "$AAPL"
+
+  - step: Apply the Codec on the Data Records
+    action: parsekit.ApplyCodec
+    codec: tweets
+    trusted: yes
+

@@ -1,0 +1,16 @@
+###
+# Parsefile for Twitter Parser
+###
+
+name: Twitter Stock SEntiment
+description: >
+  Parses Twitter Data on a 
+maintainers:
+  - Niger Little-Poole
+version: "1.0.0"
+license: public
+source_urls:
+ - https://api.twitter.com
+
+extract:
+  - twitter.yaml
