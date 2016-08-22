@@ -1,0 +1,3 @@
+parsekit==1.1.2
+parsekit-tools==1.1.0
+tweepy==3.5.0
