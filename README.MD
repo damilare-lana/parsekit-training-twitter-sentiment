@@ -31,6 +31,16 @@ Finally to run the parser, execute:
 
 `parsekit run -c /path/to/context.json --allow-unsafe`
 
+In order to output to the S3 bucket specified in the JSON context file, replace
+the OutputCSV step with OutputS3CSV as follows:
+```yaml
+  - step: Output to CSV in 'production' S3 bucket
+    action: load.OutputS3CSV
+    trusted: yes
+    repository: "{{context.bucket}}"
+    credentials: "{{context.credentials}}"
+```
+
 ### Custom Steps
 
 #### lib/twitter.py
